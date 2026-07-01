@@ -6,17 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Array Studio</title>
+    <title>DS Studio</title>
 
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/array.css">
@@ -27,21 +25,21 @@
 
 <div class="container">
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
 
     <div class="hero">
 
-        <h1>📦 Array Studio</h1>
+        <h1>📚 DS Studio</h1>
 
-        <p>Create beautiful array diagrams for assignments, reports and presentations.</p>
+        <p>Create beautiful Data Structure diagrams.</p>
 
     </div>
 
-    <!-- INPUT CARD -->
+    <!-- ================= INPUT CARD ================= -->
 
     <div class="card">
 
-        <label>Enter Value</label>
+        <label for="valueInput">Enter Value</label>
 
         <div class="inputRow">
 
@@ -62,7 +60,23 @@
 
     </div>
 
-    <!-- VALUES -->
+    <!-- ================= VISUALIZATION TYPE ================= -->
+
+    <div class="card">
+
+        <label for="renderMode">Visualization Type</label>
+
+        <select id="renderMode">
+
+            <option value="array">📦 Array</option>
+
+            <option value="stack">📚 Stack</option>
+
+        </select>
+
+    </div>
+
+    <!-- ================= CURRENT ELEMENTS ================= -->
 
     <div class="card">
 
@@ -72,7 +86,7 @@
 
     </div>
 
-    <!-- ARRAY -->
+    <!-- ================= VISUALIZATION ================= -->
 
     <div class="card">
 
@@ -84,7 +98,7 @@
 
 </div>
 
-<!-- JavaScript -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script src="js/array.js"></script>
 <script src="js/renderer.js"></script>
