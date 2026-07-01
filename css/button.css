@@ -1,0 +1,35 @@
+button{
+
+    border:none;
+
+    background:#7C3AED;
+
+    color:white;
+
+    padding:0 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:#6D28D9;
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}

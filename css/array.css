@@ -1,0 +1,161 @@
+#values{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.valueChip{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    min-width:110px;
+
+    background:#ede9fe;
+    color:#6D28D9;
+
+    padding:10px 16px;
+
+    border-radius:25px;
+
+    font-weight:600;
+}
+
+.chipButtons{
+    display:flex;
+    gap:6px;
+}
+
+.editBtn,
+.deleteBtn{
+
+    width:30px;
+    height:30px;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:13px;
+}
+
+.editBtn{
+
+    background:#FACC15;
+
+}
+
+.editBtn:hover{
+
+    background:#EAB308;
+
+}
+
+.deleteBtn{
+
+    background:#EF4444;
+
+}
+
+.deleteBtn:hover{
+
+    background:#DC2626;
+
+}
+
+.emptyState{
+
+    width:100%;
+
+    text-align:center;
+
+    color:#777;
+
+    padding:40px;
+
+    border:2px dashed #d4d4d4;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+}
+
+#arrayOutput{
+
+    overflow-x:auto;
+
+    padding-top:10px;
+
+}
+
+.array{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    width:max-content;
+
+}
+
+.cellContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.index{
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    color:#666;
+
+}
+
+.cell{
+
+    min-width:80px;
+
+    padding:16px;
+
+    text-align:center;
+
+    color:white;
+
+    background:#8B5CF6;
+
+    border:2px solid #6D28D9;
+
+    font-weight:600;
+
+    font-size:18px;
+}
+
+.cellContainer:not(:first-child) .cell{
+
+    border-left:none;
+
+}
+
+.cellContainer:first-child .cell{
+
+    border-radius:10px 0 0 10px;
+
+}
+
+.cellContainer:last-child .cell{
+
+    border-radius:0 10px 10px 0;
+
+}

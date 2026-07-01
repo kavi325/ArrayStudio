@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Array Studio</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/array.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="hero">
+
+        <h1>📦 Array Studio</h1>
+
+        <p>Create beautiful array diagrams for assignments, reports and presentations.</p>
+
+    </div>
+
+    <!-- INPUT CARD -->
+
+    <div class="card">
+
+        <label>Enter Value</label>
+
+        <div class="inputRow">
+
+            <input
+                id="valueInput"
+                type="text"
+                placeholder="Example : 25 or Hello">
+
+            <button id="addBtn">
+                ➕ Add
+            </button>
+
+            <button id="clearBtn">
+                🗑 Clear
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- VALUES -->
+
+    <div class="card">
+
+        <h2>Current Elements</h2>
+
+        <div id="values"></div>
+
+    </div>
+
+    <!-- ARRAY -->
+
+    <div class="card">
+
+        <h2>Visualization</h2>
+
+        <div id="arrayOutput"></div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="js/array.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/export.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+
+</html>
