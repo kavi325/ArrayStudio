@@ -1,17 +1,31 @@
+/* ==========================================
+   CURRENT ELEMENTS
+========================================== */
+
 #values{
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:12px;
+
 }
 
 .valueChip{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    min-width:110px;
+    gap:12px;
+
+    min-width:120px;
 
     background:#ede9fe;
+
     color:#6D28D9;
 
     padding:10px 16px;
@@ -19,17 +33,32 @@
     border-radius:25px;
 
     font-weight:600;
+
+    transition:.25s;
+
+}
+
+.valueChip:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 5px 12px rgba(0,0,0,.10);
+
 }
 
 .chipButtons{
+
     display:flex;
+
     gap:6px;
+
 }
 
 .editBtn,
 .deleteBtn{
 
     width:30px;
+
     height:30px;
 
     padding:0;
@@ -41,6 +70,7 @@
     cursor:pointer;
 
     font-size:13px;
+
 }
 
 .editBtn{
@@ -67,6 +97,10 @@
 
 }
 
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
 .emptyState{
 
     width:100%;
@@ -84,14 +118,21 @@
     font-size:18px;
 
 }
+/* ==========================================
+   ARRAY RENDERER
+========================================== */
 
 #arrayOutput{
 
     overflow-x:auto;
 
-    padding-top:10px;
+    overflow-y:hidden;
+
+    padding:20px 10px;
 
 }
+
+/* Main Array */
 
 .array{
 
@@ -101,7 +142,11 @@
 
     width:max-content;
 
+    margin:auto;
+
 }
+
+/* Each Element */
 
 .cellContainer{
 
@@ -113,34 +158,59 @@
 
 }
 
+/* Index Number */
+
 .index{
 
-    font-weight:600;
+    font-size:16px;
 
-    margin-bottom:10px;
+    font-weight:600;
 
     color:#666;
 
+    margin-bottom:10px;
+
 }
+
+/* Cell */
 
 .cell{
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     min-width:80px;
 
-    padding:16px;
+    min-height:65px;
 
-    text-align:center;
-
-    color:white;
+    padding:15px 20px;
 
     background:#8B5CF6;
 
-    border:2px solid #6D28D9;
+    color:white;
+
+    font-size:20px;
 
     font-weight:600;
 
-    font-size:18px;
+    border:2px solid #6D28D9;
+
+    transition:.25s;
+
 }
+
+/* Hover */
+
+.cell:hover{
+
+    background:#7C3AED;
+
+}
+
+/* Merge Borders */
 
 .cellContainer:not(:first-child) .cell{
 
@@ -148,14 +218,277 @@
 
 }
 
+/* First Cell */
+
 .cellContainer:first-child .cell{
 
     border-radius:10px 0 0 10px;
 
 }
 
+/* Last Cell */
+
 .cellContainer:last-child .cell{
 
     border-radius:0 10px 10px 0;
 
 }
+/* ==========================================
+   STACK RENDERER
+========================================== */
+
+.stackContainer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:20px auto;
+
+    width:max-content;
+
+}
+
+.stackLabel{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#6D28D9;
+
+    margin:12px 0;
+
+    letter-spacing:1px;
+
+}
+
+.stack{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* Stack Cell */
+
+.stackCell{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:140px;
+
+    min-height:65px;
+
+    padding:15px 20px;
+
+    background:#8B5CF6;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    border:2px solid #6D28D9;
+
+    transition:.25s;
+
+}
+
+/* Hover */
+
+.stackCell:hover{
+
+    background:#7C3AED;
+
+}
+
+/* Merge Borders */
+
+.stackCell:not(:first-child){
+
+    border-top:none;
+
+}
+
+/* Top Cell */
+
+.stack .stackCell:first-child{
+
+    border-radius:10px 10px 0 0;
+
+}
+
+/* Bottom Cell */
+
+.stack .stackCell:last-child{
+
+    border-radius:0 0 10px 10px;
+
+}
+
+/* Shadow */
+
+.stack{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    border-radius:10px;
+
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:768px){
+
+    .array{
+
+        justify-content:flex-start;
+
+    }
+
+    .cell{
+
+        min-width:65px;
+
+        min-height:55px;
+
+        font-size:17px;
+
+        padding:12px;
+
+    }
+
+    .stackCell{
+
+        min-width:110px;
+
+        min-height:55px;
+
+        font-size:17px;
+
+        padding:12px;
+
+    }
+
+    .stackLabel{
+
+        font-size:16px;
+
+    }
+
+    .valueChip{
+
+        min-width:100px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+#arrayOutput::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+#arrayOutput::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+    border-radius:20px;
+
+}
+
+#arrayOutput::-webkit-scrollbar-thumb{
+
+    background:#8B5CF6;
+
+    border-radius:20px;
+
+}
+
+#arrayOutput::-webkit-scrollbar-thumb:hover{
+
+    background:#6D28D9;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.array,
+.stack{
+
+    animation:fadeIn .25s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+    background:#8B5CF6;
+
+    color:white;
+
+}
+
+/* ==========================================
+   FUTURE DATA STRUCTURES
+========================================== */
+
+/*
+.queueContainer{}
+.queueCell{}
+
+.linkedList{}
+.linkedNode{}
+
+.treeContainer{}
+.treeNode{}
+
+.graphContainer{}
+.graphNode{}
+*/
